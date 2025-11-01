@@ -126,7 +126,7 @@ function MagneticSocialLink({
 export default function Personal() {
   return (
     <motion.main
-      className="space-y-24"
+      className="space-y-10"
       variants={VARIANTS_CONTAINER}
       initial="hidden"
       animate="visible"
@@ -168,6 +168,8 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
+        <hr className="mb-10 border-zinc-200 dark:border-zinc-800" />
+
         <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
@@ -201,6 +203,8 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
+        <hr className="mb-10 border-zinc-200 dark:border-zinc-800" />
+
         <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
         <div className="flex flex-col space-y-2">
           {WORK_EXPERIENCE.map((job) => (
@@ -239,6 +243,8 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
+        <hr className="mb-10 border-zinc-200 dark:border-zinc-800" />
+
         <h3 className="mb-3 text-lg font-medium">Blog</h3>
         <div className="flex flex-col space-y-0">
           <AnimatedBackground
@@ -275,6 +281,8 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
+        <hr className="mb-10 border-zinc-200 dark:border-zinc-800" />
+
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
