@@ -14,14 +14,15 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
   alternates: {
-    canonical: '/'
+    canonical: '/',
   },
   title: {
     default: 'Faiz Jauzah - Personal Portofolio',
-    template: '%s | FJ'
+    template: '%s | FJ',
   },
-  description:  'This is my personal portofolio website showcasing my projects and skills as a developer.',
-};
+  description:
+    'This is my personal portofolio website showcasing my projects and skills as a developer.',
+}
 
 const geist = Geist({
   variable: '--font-geist',

@@ -137,11 +137,29 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Universitas Islam Indonesia student with hands-on experience in AI/ML Engineering and Full-Stack Web Development. I'm passionate about building creative, data-driven applications.
+            <a
+              className="hover:text-blue-600 dark:hover:text-blue-600"
+              href="https://www.uii.ac.id/"
+              target="_blank"
+            >
+              Universitas Islam Indonesia
+            </a>{' '}
+            <a
+              className="hover:text-blue-600 dark:hover:text-blue-600"
+              href="https://informatics.uii.ac.id/"
+              target="_blank"
+            >
+              Infomatics
+            </a>{' '}
+            student with hands-on experience in AI/ML Engineering and Full-Stack
+            Web Development. I'm passionate about building creative, data-driven
+            applications.
           </p>
           <br />
           <p className="text-zinc-600 dark:text-zinc-400">
-            I am ambitious, a quick learner, and eager to grow in the AI/ML field. I am actively seeking internship or full-time opportunities where I can make an impact.
+            I am ambitious, a quick learner, and eager to grow in the AI/ML
+            field. I am actively seeking internship or full-time opportunities
+            where I can make an impact.
           </p>
         </div>
       </motion.section>
@@ -168,7 +186,7 @@ export default function Personal() {
                   target="_blank"
                 >
                   {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
+                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full dark:bg-zinc-50"></span>
                 </a>
                 <p className="text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
