@@ -1,5 +1,5 @@
 'use client'
-import { TextEffect } from '@/components/ui/text-effect'
+import { TextLoop } from '@/components/ui/text-loop'
 import Link from 'next/link'
 
 export function Header() {
@@ -9,15 +9,13 @@ export function Header() {
         <Link href="/" className="font-medium text-black dark:text-white text-xl sm:text-2xl">
           Muhammad Faiz Jauzah
         </Link>
-        <TextEffect
-          as="p"
-          preset="fade"
-          per="char"
-          className="text-zinc-600 dark:text-zinc-500"
-          delay={0.5}
-        >
-          AI/ML Engineer & Web Developer
-        </TextEffect>
+        <div className="text-zinc-600 dark:text-zinc-500">
+          <TextLoop className="text-sm text-zinc-600 dark:text-zinc-500" interval={2}>
+            <span>AI/ML Engineer</span>
+            <span>Web Developer</span>
+          </TextLoop>
+          <span className="sr-only">AI/ML Engineer & Web Developer</span>
+        </div>
       </div>
     </header>
   )
