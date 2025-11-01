@@ -137,8 +137,11 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            Universitas Islam Indonesia student with hands-on experience in AI/ML Engineering and Full-Stack Web Development. I'm passionate about building creative, data-driven applications.
+          </p>
+          <br />
+          <p className="text-zinc-600 dark:text-zinc-400">
+            I am ambitious, a quick learner, and eager to grow in the AI/ML field. I am actively seeking internship or full-time opportunities where I can make an impact.
           </p>
         </div>
       </motion.section>
@@ -152,7 +155,11 @@ export default function Personal() {
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="aspect-video w-full rounded-xl"
+                />
               </div>
               <div className="px-1">
                 <a

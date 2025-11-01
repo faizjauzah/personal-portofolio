@@ -2,7 +2,7 @@ type Project = {
   name: string
   description: string
   link: string
-  video: string
+  image: string
   id: string
 }
 
@@ -29,19 +29,19 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
+    name: 'Garda Pentagon',
     description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+      'Guest and Administration Website for Pengadilan Tinggi Agama Gorontalo.',
+    link: 'https://github.com/faizjauzah/garda-pentagon',
+    image:
+      '/cover.jpg',
     id: 'project1',
   },
   {
     name: 'Motion Primitives',
     description: 'UI kit to make beautiful, animated interfaces.',
     link: 'https://motion-primitives.com/',
-    video:
+    image:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
     id: 'project2',
   },
@@ -49,28 +49,44 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
-    end: 'Present',
-    link: 'https://ibelick.com',
+    company: 'Laboratorium Terpadu Infomatika UII',
+    title: 'Laboratory Assistant of Fundamental Applications Development',
+    start: 'Feb 2025',
+    end: 'Jul 2025',
+    link: 'https://www.linkedin.com/in/faizjauzah/',
     id: 'work1',
   },
   {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
-    end: '2024',
-    link: 'https://ibelick.com',
+    company: 'Laboratorium Terpadu Infomatika UII',
+    title: 'Laboratory Assistant of Information Systems Development',
+    start: 'Feb 2025',
+    end: 'Jul 2025',
+    link: 'https://www.linkedin.com/in/faizjauzah/',
     id: 'work2',
   },
   {
-    company: 'Freelance',
-    title: 'Front-end Developer',
-    start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
+    company: 'Laboratorium Terpadu Infomatika UII',
+    title: 'Laboratory Assistant of Web-Based Application Development',
+    start: 'Sep 2024',
+    end: 'Feb 2025',
+    link: 'https://www.linkedin.com/in/faizjauzah/',
     id: 'work3',
+  },
+  {
+    company: 'Laboratorium Terpadu Infomatika UII',
+    title: 'Laboratory Assistant of Data Structure and Algorithms',
+    start: 'Mar 2024',
+    end: 'Aug 2024',
+    link: 'https://www.linkedin.com/in/faizjauzah/',
+    id: 'work4',
+  },
+  {
+    company: 'Laboratorium Terpadu Infomatika UII',
+    title: 'Laboratory Assistant of Programming Logic',
+    start: 'Sep 2023',
+    end: 'Feb 2024',
+    link: 'https://www.linkedin.com/in/faizjauzah/',
+    id: 'work5',
   },
 ]
 
