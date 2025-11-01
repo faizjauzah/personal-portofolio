@@ -132,6 +132,7 @@ export default function Personal() {
       animate="visible"
     >
       <motion.section
+        id="about"
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -165,6 +166,7 @@ export default function Personal() {
       </motion.section>
 
       <motion.section
+        id="projects"
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -200,6 +202,7 @@ export default function Personal() {
       </motion.section>
 
       <motion.section
+        id="experience"
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -240,6 +243,7 @@ export default function Personal() {
       </motion.section>
 
       <motion.section
+        id="blog"
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
@@ -278,6 +282,7 @@ export default function Personal() {
       </motion.section>
 
       <motion.section
+        id="connect"
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >

@@ -4,6 +4,7 @@ import './globals.css'
 import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
+import { Sidebar } from '@/components/ui/sidebar'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -46,6 +47,7 @@ export default function RootLayout({
               {children}
               <Footer />
             </div>
+            <Sidebar />
           </div>
         </ThemeProvider>
       </body>
