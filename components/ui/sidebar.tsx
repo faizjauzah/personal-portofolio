@@ -50,9 +50,20 @@ export function Sidebar() {
               className="group relative flex items-center"
               onClick={(e) => {
                 e.preventDefault()
-                document.querySelector(item.href)?.scrollIntoView({
-                  behavior: 'smooth',
-                })
+                const element = document.querySelector(item.href)
+                if (element) {
+                  const elementRect = element.getBoundingClientRect()
+                  const absoluteElementTop =
+                    elementRect.top + window.pageYOffset
+                  const middle =
+                    absoluteElementTop -
+                    window.innerHeight / 2 +
+                    elementRect.height / 2
+                  window.scrollTo({
+                    top: middle,
+                    behavior: 'smooth',
+                  })
+                }
               }}
             >
               <span className="absolute right-0 mr-8 text-sm opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:text-zinc-400">

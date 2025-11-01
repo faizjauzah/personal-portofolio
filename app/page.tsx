@@ -126,7 +126,7 @@ function MagneticSocialLink({
 export default function Personal() {
   return (
     <motion.main
-      className="space-y-10"
+      className="space-y-10 [&>section]:scroll-mt-32"
       variants={VARIANTS_CONTAINER}
       initial="hidden"
       animate="visible"
@@ -136,7 +136,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <div className="flex-1">
+        <div className="mt-5 flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
             <a
               className="hover:text-blue-600 dark:hover:text-blue-600"
