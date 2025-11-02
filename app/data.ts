@@ -33,8 +33,7 @@ export const PROJECTS: Project[] = [
     description:
       'Guest and Administration Website for Pengadilan Tinggi Agama Gorontalo.',
     link: 'https://github.com/faizjauzah/garda-pentagon',
-    image:
-      '/cover.jpg',
+    image: '/cover.jpg',
     id: 'project1',
   },
   {
@@ -53,7 +52,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Laboratory Assistant of Fundamental Applications Development',
     start: 'Feb 2025',
     end: 'Jul 2025',
-    link: 'https://www.linkedin.com/in/faizjauzah/',
+    link: 'https://www.linkedin.com/in/faizjauzah/details/experience/',
     id: 'work1',
   },
   {
@@ -61,7 +60,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Laboratory Assistant of Information Systems Development',
     start: 'Feb 2025',
     end: 'Jul 2025',
-    link: 'https://www.linkedin.com/in/faizjauzah/',
+    link: 'https://www.linkedin.com/in/faizjauzah/details/experience/',
     id: 'work2',
   },
   {
@@ -69,7 +68,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Laboratory Assistant of Web-Based Application Development',
     start: 'Sep 2024',
     end: 'Feb 2025',
-    link: 'https://www.linkedin.com/in/faizjauzah/',
+    link: 'https://www.linkedin.com/in/faizjauzah/details/experience/',
     id: 'work3',
   },
   {
@@ -77,7 +76,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Laboratory Assistant of Data Structure and Algorithms',
     start: 'Mar 2024',
     end: 'Aug 2024',
-    link: 'https://www.linkedin.com/in/faizjauzah/',
+    link: 'https://www.linkedin.com/in/faizjauzah/details/experience/',
     id: 'work4',
   },
   {
@@ -85,7 +84,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Laboratory Assistant of Programming Logic',
     start: 'Sep 2023',
     end: 'Feb 2024',
-    link: 'https://www.linkedin.com/in/faizjauzah/',
+    link: 'https://www.linkedin.com/in/faizjauzah/details/experience/',
     id: 'work5',
   },
 ]
@@ -113,7 +112,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     title: 'How to Export Metadata from MDX for Next.js SEO',
-    description: 'A guide on exporting metadata from MDX files to leverage Next.js SEO features.',
+    description:
+      'A guide on exporting metadata from MDX files to leverage Next.js SEO features.',
     link: '/blog/example-mdx-metadata',
     uid: 'blog-4',
   },
