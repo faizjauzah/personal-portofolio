@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bauhaus-bg: #F0F0F0;
+  --color-bauhaus-fg: #121212;
+  --color-primary-red: #D02020;
+  --color-primary-blue: #1040C0;
+  --color-primary-yellow: #F0C020;
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bauhaus-bg);
+    color: var(--color-bauhaus-fg);
+    font-family: var(--font-sans);
+  }
+}
+
+.bauhaus-shadow-sm {
+  box-shadow: 4px 4px 0px 0px #121212;
+}
+
+.bauhaus-shadow-md {
+  box-shadow: 6px 6px 0px 0px #121212;
+}
+
+.bauhaus-shadow-lg {
+  box-shadow: 8px 8px 0px 0px #121212;
+}
+
+.bauhaus-dot-pattern {
+  background-image: radial-gradient(#121212 2px, transparent 2px);
+  background-size: 20px 20px;
+  opacity: 0.05;
+}
+
+.text-outline-white {
+  text-shadow: 
+    -4px -4px 0 #fff,  0   -4px 0 #fff,  4px -4px 0 #fff,
+    -4px  0   0 #fff,                    4px  0   0 #fff,
+    -4px  4px 0 #fff,  0    4px 0 #fff,  4px  4px 0 #fff;
+}
+@media (min-width: 768px) {
+  .text-outline-white {
+    text-shadow: 
+      -8px -8px 0 #fff,  0   -8px 0 #fff,  8px -8px 0 #fff,
+      -8px  0   0 #fff,                    8px  0   0 #fff,
+      -8px  8px 0 #fff,  0    8px 0 #fff,  8px  8px 0 #fff,
+      -8px -4px 0 #fff,  8px -4px 0 #fff,
+      -8px  4px 0 #fff,  8px  4px 0 #fff,
+      -4px -8px 0 #fff,  4px -8px 0 #fff,
+      -4px  8px 0 #fff,  4px  8px 0 #fff,
+      -6px -6px 0 #fff,  6px -6px 0 #fff,
+      -6px  6px 0 #fff,  6px  6px 0 #fff;
+  }
+}
