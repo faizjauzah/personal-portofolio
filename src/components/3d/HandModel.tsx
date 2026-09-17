@@ -1,12 +1,12 @@
-import { useRef, useMemo } from 'react'
-import { useFrame } from '@react-three/fiber'
-import { useLoader } from '@react-three/fiber'
-import * as THREE from 'three'
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'
+import { useRef, useMemo } from "react";
+import { useFrame } from "@react-three/fiber";
+import { useLoader } from "@react-three/fiber";
+import * as THREE from "three";
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader.js";
 
 export function HandModel() {
   const ref = useRef<THREE.Group>(null);
-  const objPath = '/hand.obj';
+  const objPath = `${import.meta.env.BASE_URL}hand.obj`;
 
   const obj = useLoader(OBJLoader, objPath);
 
@@ -16,9 +16,9 @@ export function HandModel() {
 
     // Apply the strict Bauhaus Red material with lighting support
     const mat = new THREE.MeshStandardMaterial({
-      color: '#D02020',
+      color: "#D02020",
       roughness: 0.3,
-      metalness: 0.1
+      metalness: 0.1,
     });
     clone.traverse((child) => {
       if (child instanceof THREE.Mesh) {
@@ -70,5 +70,5 @@ export function HandModel() {
     <group ref={ref}>
       <primitive object={clonedObj} />
     </group>
-  )
+  );
 }
