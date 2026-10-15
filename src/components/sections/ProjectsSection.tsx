@@ -68,34 +68,44 @@ export function ProjectsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mt-8">
           {projects.map((project, i) => (
-            <div key={i} className={`relative h-full ${i % 2 === 0 ? "transform rotate-1" : "transform -rotate-1"}`}>
-              <Card decorationColor={project.color} decorationPattern={project.pattern} className="h-full">
-                <p className="font-bold text-sm uppercase tracking-widest text-gray-500 mb-2">{project.type}</p>
-                <h3 className="font-black text-2xl md:text-3xl uppercase tracking-tighter mb-4 leading-none">{project.title}</h3>
-                <p className="font-medium text-lg mb-6 leading-relaxed">{project.description}</p>
+            <Card key={i} decorationColor={project.color} decorationPattern={project.pattern} className={`h-full transition-transform duration-200 hover:-translate-y-1 ${i % 2 === 0 ? "transform rotate-1" : "transform -rotate-1"}`}>
+              <p className="font-bold text-sm uppercase tracking-widest text-gray-500 mb-2">{project.type}</p>
+              <h3 className="font-black text-2xl md:text-3xl uppercase tracking-tighter mb-4 leading-none">{project.title}</h3>
+              <p className="font-medium text-lg mb-6 leading-relaxed">{project.description}</p>
 
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="relative z-20 inline-block mb-6 border-2 border-black bg-[#D02020] text-white px-3 py-1 text-sm font-black uppercase tracking-wider shadow-[2px_2px_0px_0px_black] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all"
-                  >
-                    Live Demo ↗
-                  </a>
-                )}
-
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="border-2 border-black px-3 py-1 text-xs font-bold uppercase tracking-wider bg-gray-100">
-                      {tag}
-                    </span>
-                  ))}
+              {(project.demo || project.repo) && (
+                <div className="flex flex-wrap gap-3 mb-6">
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-block border-2 border-black bg-[#D02020] text-white px-4 py-2 text-sm font-black uppercase tracking-wider shadow-[3px_3px_0px_0px_black] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
+                    >
+                      Live Demo ↗
+                    </a>
+                  )}
+                  {project.repo && (
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-block border-2 border-black bg-white text-black px-4 py-2 text-sm font-black uppercase tracking-wider shadow-[3px_3px_0px_0px_black] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none"
+                    >
+                      GitHub Repo ↗
+                    </a>
+                  )}
                 </div>
-              </Card>
+              )}
 
-              {project.repo && <a href={project.repo} target="_blank" rel="noreferrer" aria-label={`${project.title} on GitHub`} className="absolute inset-0 z-10 cursor-pointer" />}
-            </div>
+              <div className="flex flex-wrap gap-2 mt-auto">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="border-2 border-black px-3 py-1 text-xs font-bold uppercase tracking-wider bg-gray-100">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </Card>
           ))}
         </div>
       </div>
