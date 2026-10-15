@@ -1,5 +1,16 @@
 import { Card } from "../ui/Card";
 
+type Project = {
+  title: string;
+  type: string;
+  description: string;
+  color: "red" | "blue" | "yellow";
+  pattern: "circle" | "triangle" | "square";
+  tags: string[];
+  repo?: string;
+  demo?: string;
+};
+
 export function ProjectsSection() {
   const projects = [
     {
@@ -10,6 +21,7 @@ export function ProjectsSection() {
       pattern: "circle" as const,
       tags: ["Computer Vision", "YOLOv12", "Semi-Supervised Learning"],
       repo: "https://github.com/faizjauzah/optimal-ssl-split",
+      demo: "https://demo-object-detection.streamlit.app",
     },
     {
       title: "NLP Text Summarizer",
@@ -67,11 +79,23 @@ export function ProjectsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mt-8">
           {projects.map((project, i) => (
-            <a key={i} href={project.repo} target="_blank" rel="noreferrer" className="block h-full">
-              <Card decorationColor={project.color} decorationPattern={project.pattern} className={`h-full cursor-pointer ${i % 2 === 0 ? "transform rotate-1" : "transform -rotate-1"}`}>
+            <div key={i} className={`relative h-full ${i % 2 === 0 ? "transform rotate-1" : "transform -rotate-1"}`}>
+              <Card decorationColor={project.color} decorationPattern={project.pattern} className="h-full">
                 <p className="font-bold text-sm uppercase tracking-widest text-gray-500 mb-2">{project.type}</p>
                 <h3 className="font-black text-2xl md:text-3xl uppercase tracking-tighter mb-4 leading-none">{project.title}</h3>
                 <p className="font-medium text-lg mb-6 leading-relaxed">{project.description}</p>
+
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="relative z-20 inline-block mb-6 border-2 border-black bg-[#D02020] text-white px-3 py-1 text-sm font-black uppercase tracking-wider shadow-[2px_2px_0px_0px_black] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-none transition-all"
+                  >
+                    Live Demo ↗
+                  </a>
+                )}
+
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tags.map((tag) => (
                     <span key={tag} className="border-2 border-black px-3 py-1 text-xs font-bold uppercase tracking-wider bg-gray-100">
@@ -80,7 +104,9 @@ export function ProjectsSection() {
                   ))}
                 </div>
               </Card>
-            </a>
+
+              {project.repo && <a href={project.repo} target="_blank" rel="noreferrer" aria-label={`${project.title} on GitHub`} className="absolute inset-0 z-10 cursor-pointer" />}
+            </div>
           ))}
         </div>
       </div>
