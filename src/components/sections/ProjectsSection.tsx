@@ -1,16 +1,5 @@
 import { Card } from "../ui/Card";
 
-type Project = {
-  title: string;
-  type: string;
-  description: string;
-  color: "red" | "blue" | "yellow";
-  pattern: "circle" | "triangle" | "square";
-  tags: string[];
-  repo?: string;
-  demo?: string;
-};
-
 export function ProjectsSection() {
   const projects = [
     {
