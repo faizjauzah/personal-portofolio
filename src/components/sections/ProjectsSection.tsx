@@ -20,6 +20,7 @@ export function ProjectsSection() {
       pattern: "triangle" as const,
       tags: ["NLP", "NLTK", "Streamlit"],
       repo: "https://github.com/faizjauzah/text-summarizer",
+      demo: "https://faizjauzah-text-summarizer.streamlit.app",
     },
     {
       title: "Taxi Price Prediction",
